@@ -9,11 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var ImageCoin: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
 
+    @IBAction func ButtonFlipCoin(_ sender: Any) {
+        let imageArray = [#imageLiteral(resourceName: "head"), #imageLiteral(resourceName: "tail")]
+        ImageCoin.image = imageArray.randomElement()
+    }
 }
 
